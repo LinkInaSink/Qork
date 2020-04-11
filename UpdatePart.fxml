@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="360.0" prefWidth="380.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox layoutX="18.0" layoutY="20.0">
+        <Label text="Update Part">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+            <padding>
+                <Insets right="85.0"/>
+            </padding>
+        </Label>
+        <RadioButton fx:id="inHouseRadio" mnemonicParsing="false" onAction="#partRadioToggle" selected="true"
+                     text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="partType"/>
+            </toggleGroup>
+            <padding>
+                <Insets right="5.0" top="5.0"/>
+            </padding>
+        </RadioButton>
+        <RadioButton fx:id="outsourcedRadio" mnemonicParsing="false" onAction="#partRadioToggle" text="Outsourced"
+                     toggleGroup="$partType">
+            <padding>
+                <Insets top="5.0"/>
+            </padding>
+        </RadioButton>
+    </HBox>
+    <Label layoutX="55.0" layoutY="81.0" text="ID" />
+    <TextField fx:id="idTextField" layoutX="152.0" layoutY="77.0" prefWidth="160.0" promptText="Product ID">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font>
+    </TextField>
+    <Label layoutX="45.0" layoutY="119.0" text="Name" />
+    <Label layoutX="35.0" layoutY="160.0" text="Inventory" />
+    <Label layoutX="33.0" layoutY="200.0" text="Price/Cost" />
+    <Label layoutX="49.0" layoutY="242.0" text="Max" />
+    <Label layoutX="248.0" layoutY="242.0" text="Min" />
+    <TextField fx:id="nameTextField" layoutX="152.0" layoutY="115.0" prefWidth="160.0" promptText="Product Name">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font></TextField>
+    <TextField fx:id="invTextField" layoutX="152.0" layoutY="156.0" prefWidth="160.0" promptText="Inventory Level">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font></TextField>
+    <TextField fx:id="priceTextField" layoutX="152.0" layoutY="196.0" prefWidth="160.0" promptText="Price per Unit">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font></TextField>
+    <TextField fx:id="maxTextField" layoutX="152.0" layoutY="238.0" prefWidth="80.0" promptText="Max">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font></TextField>
+    <TextField fx:id="minTextField" layoutX="272.0" layoutY="238.0" prefWidth="80.0" promptText="Min">
+        <font>
+            <Font name="System Italic" size="12.0" />
+        </font></TextField>
+    <Button fx:id="saveBtn" layoutX="229.0" layoutY="321.0" mnemonicParsing="false" onAction="#saveBtnAction" prefWidth="60.0" text="Save" />
+    <Button fx:id="cancelBtn" layoutX="293.0" layoutY="321.0" mnemonicParsing="false" onAction="#cancelBtnAction" prefWidth="60.0" text="Cancel" />
+    <HBox fx:id="compHBox" layoutX="33.0" layoutY="282.0" prefHeight="17.0" prefWidth="318.0" spacing="33.0" visible="false">
+        <Label text="Company Name">
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </Label>
+        <TextField fx:id="compNameTextField" prefWidth="160.0" promptText="Company Name">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox fx:id="machineHBox" layoutX="35.0" layoutY="282.0" prefHeight="25.0" prefWidth="318.0" spacing="56.0">
+        <Label text="Machine ID">
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </Label>
+        <TextField fx:id="machineIDTextField" prefWidth="136.0" promptText="Machine ID">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font></TextField>
+    </HBox>
+</AnchorPane>

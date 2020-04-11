@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="360.0" prefWidth="380.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox layoutX="20.0" layoutY="64.0" prefHeight="25.0" prefWidth="340.0" spacing="120.0">
+        <Label text="ID">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="idTextField" prefWidth="160.0" promptText="Product ID">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox layoutX="20.0" layoutY="110.0" prefHeight="25.0" prefWidth="340.0" spacing="100.0">
+        <Label text="Name">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="nameTextField" prefWidth="160.0" promptText="Product Name">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox layoutX="20.0" layoutY="155.0" prefHeight="25.0" prefWidth="340.0" spacing="82.0">
+        <Label text="Inventory">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="invTextField" prefWidth="160.0" promptText="Inventory Level">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox layoutX="20.0" layoutY="200.0" prefHeight="25.0" prefWidth="340.0" spacing="78.0">
+        <Label text="Price/Cost">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="priceTextField" prefWidth="160.0" promptText="Price per Unit">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox layoutX="20.0" layoutY="245.0" prefHeight="25.0" prefWidth="340.0" spacing="40.0">
+        <Label text="Max">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="maxTextField" prefWidth="80.0" promptText="Max">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+        <Label text="Min">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="minTextField" prefWidth="80.0" promptText="Min">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox fx:id="machineHBox" layoutX="20.0" layoutY="287.0" prefHeight="25.0" prefWidth="340.0" spacing="74.0">
+        <Label text="Machine ID">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="machineIDTextField" prefHeight="25.0" prefWidth="160.0" promptText="Machine ID">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox layoutX="250.0" layoutY="320.0" prefHeight="35.0" prefWidth="122.0" spacing="5.0">
+        <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveBtnAction" prefHeight="0.0" prefWidth="59.0" text="Save">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelBtnAction" prefWidth="60.0" text="Cancel">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <HBox fx:id="compHBox" layoutX="20.0" layoutY="287.0" prefHeight="25.0" prefWidth="340.0" spacing="50.0" visible="false">
+        <Label text="Company Name">
+            <HBox.margin>
+                <Insets top="5.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="compNameTextField" prefWidth="160.0" promptText="Company Name">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+    </HBox>
+    <HBox layoutX="20.0" layoutY="20.0" prefHeight="27.0" prefWidth="340.0" spacing="5.0">
+        <Label text="Add Part">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <padding>
+                <Insets right="100.0" />
+            </padding>
+        </Label>
+        <RadioButton fx:id="inHouseRadio" mnemonicParsing="false" onAction="#partRadioToggle" selected="true" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="partType" />
+            </toggleGroup>
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </RadioButton>
+        <RadioButton fx:id="outsourcedRadio" mnemonicParsing="false" onAction="#partRadioToggle" text="Outsourced" toggleGroup="$partType">
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+        </RadioButton>
+    </HBox>
+</AnchorPane>
